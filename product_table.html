@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="product_tbl.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="add_product_form">
+			<label for="product_sku">
+				<span>Product SKU</span> 
+				<input type="text" class="errorTextbox" name="product_sku" id="product_sku">
+				<span class="error1"></span>
+			</label>
+			<label for="product_name">
+				<span>Product Name</span> 
+				<input type="text" class="errorTextbox" name="product_name" id="product_name">
+				<span class="error2"></span>
+			</label>
+			<label for="product_price">
+				<span>Product Price</span> 
+				<input type="text" class="errorTextbox" name="product_price" id="product_price">
+				<span class="error3"></span>
+			</label>
+			<label for="product_quantity">
+				<span>Product Quantity</span> 
+				<input type="text" class="errorTextbox" name="product_quantity" id="product_quantity">
+				<span class="error4"></span>
+			</label>
+			<p class="submit">
+				<input type="button" name="add_product" id="add_product" value="Add Product">
+				<!-- <button id="add_product" >Add Product</button> -->
+			</p>
+		</div>
+		<div id="notification">
+			<div class="success">Product Added Successfully.<a href="#" class="close">X</a></div>
+			<div class="error">Plaese enter all field correctly<a href="#" class="close">X</a></div>
+		</div>
+		<div id="product_list">
+			<!-- <table id="#tblShow"> -->
+				<!-- <tr>
+					<th>SKU</th>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td>101</td>
+					<td>Product 101</td>
+					<td>$150.00</td>
+					<td>50</td>
+					<td><a href="#" class="edit">Edit</a><a href="#" class="delete">Delete</a></td>
+				</tr>
+				<tr>
+					<td>102</td>
+					<td>Product 102</td>
+					<td>$100.00</td>
+					<td>20</td>
+					<td><a href="#" class="edit">Edit</a><a href="#" class="delete">Delete</a></td>
+				</tr> -->
+			<!-- </table> -->
+		</div>
+	</div>
+</body>
+</html>
