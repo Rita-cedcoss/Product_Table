@@ -34,27 +34,27 @@ $(document).ready(function(){
     if(inpVal2=="")
     {
        $(".error2").html("please enter value");
-       $("#product_price").css("border-color","#FF5733");
+       $("#product_name").css("border-color","#FF5733");
        $(".error2").css("color","#FF5733");
     }
     else{
         if(!inpVal2.match(regString))
        {
         $(".error2").html("please enter string value");
-        $("#product_price").css("border-color","#FF5733");
+        $("#product_name").css("border-color","#FF5733");
         $(".error2").css("color","#FF5733");
         }
        else
        {
         $(".error2").html("");
-        $("#product_price").css("border-color","");
+        $("#product_name").css("border-color","");
        }
     }
 
     if(inpVal3=="")
     {
        $(".error3").html("please enter value");
-       $("#product_name").css("border-color","#FF5733");
+       $("#product_price").css("border-color","#FF5733");
        $(".error3").css("color","#FF5733");
     }
     else 
@@ -62,13 +62,13 @@ $(document).ready(function(){
     if(!inpVal3.match(regexNum))
     {
         $(".error3").html("please enter integer value");
-        $("#product_name").css("border-color","#FF5733");
+        $("#product_price").css("border-color","#FF5733");
         $(".error3").css("color","#FF5733");
     }
     else
     {
         $(".error3").html("");
-        $("#product_name").css("border-color","");
+        $("#product_price").css("border-color","");
         
     }
    }
@@ -108,8 +108,11 @@ $(document).ready(function(){
     }
     $("#product_list").html(text);
     text="</table>"
+    
   }
   
+
+
   //for Add Product
   
   $("#add_product").click(function()
@@ -132,7 +135,7 @@ $(document).ready(function(){
       }
       else 
       {
-         if(! $inpVal1.match(regexNum))  
+         if(!$inpVal1.match(regexNum))  
          {
         $errorFlag=1;
         $(".error1").html("Sku string not match empty");
@@ -160,7 +163,7 @@ $(document).ready(function(){
       }
       else 
       {
-         if(! $inpVal2.match(regString))  
+         if(!$inpVal2.match(regString))  
          {
         $errorFlag=1;
         $(".error2").html("value not match empty");
@@ -189,7 +192,7 @@ $(document).ready(function(){
       }
       else 
       {
-         if(! $inpVal3.match(regexNum))  
+         if(!$inpVal3.match(regexNum))  
          {
         $errorFlag=1;
         $(".error3").html("value not match empty");
@@ -245,19 +248,17 @@ $(document).ready(function(){
   })
 // delete 
     $("#product_list").on('click','.delete',function(){
-
+        
         $confirm_msg=confirm("are you shower wants to delete massage");
         if($confirm_msg==true)
         {
             $index=$(this).parent().parent().remove();
-            if($index=="")
-            {
-            
-            }
+           
         }
         else{
             return;
         }
+        
         
     })
     //edit  
